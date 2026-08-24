@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -26,7 +29,11 @@ function SignupPage() {
                 return;
             }
 
-            setMessage('Registration successful!');
+            navigate('/login', {
+                state: {
+                message: 'Registration successful! Please log in.',
+                },
+            });
 
             setEmail('');
             setPassword('');
