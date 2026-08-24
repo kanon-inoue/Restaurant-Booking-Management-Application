@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 function SignupPage() {
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -15,7 +14,7 @@ function SignupPage() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, email, password }),
+                body: JSON.stringify({ email, password }),
             });
 
             const data = await response.json();
@@ -36,16 +35,6 @@ function SignupPage() {
             <h2>Customer Registration</h2>
 
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Name</label>
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
-                        required
-                    />
-                </div>
-
                 <div>
                     <label>Email</label>
                     <input
