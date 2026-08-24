@@ -7,9 +7,18 @@ const generateToken = (id) => {
 
 const registerCustomer = async (req, res) => {
     const { email, password } = req.body;
+    
+    if (!email || !password) {
+        return res.status(400).json({
+            message: 'Email and password are required',
+        });
+    }
+
     try {
         const userExists = await User.findOne({ email });
-        if (userExists) return res.status(400).json({ message: 'User already exists' });
+        if (userExists) return res.status(400).json({ 
+            message: 'User already exists' 
+        });
 
         const user = await User.create({ 
             email, 
