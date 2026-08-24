@@ -1,0 +1,286 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="PIzPjd1FZAi6rG4LeMe5">
+    <mxGraphModel dx="1378" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jRz1H020sM46KBVu37yh-1" parent="1" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=110;strokeWidth=2;align=center;" value="&lt;p style=&quot;margin:0px;margin-top:4px;margin-left:7px;text-align:left;&quot;&gt;&lt;b&gt;req&lt;/b&gt;  ReqDiagram&lt;/p&gt;" vertex="1">
+          <mxGeometry height="490" width="1130" x="200" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-2" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Restaurant Booking Management System" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-3" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Functional Requirement" vertex="1">
+          <mxGeometry height="60" width="120" x="410" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-4" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Non-Functional Requirement" vertex="1">
+          <mxGeometry height="60" width="120" x="1040" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-5" edge="1" parent="1" source="jRz1H020sM46KBVu37yh-2" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" target="jRz1H020sM46KBVu37yh-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-6" edge="1" parent="1" source="jRz1H020sM46KBVu37yh-2" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" target="jRz1H020sM46KBVu37yh-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-7" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="200" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-8" parent="jRz1H020sM46KBVu37yh-7" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-9" parent="jRz1H020sM46KBVu37yh-7" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Customer Registration" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-10" parent="jRz1H020sM46KBVu37yh-7" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-11" parent="jRz1H020sM46KBVu37yh-7" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can create an account&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="jRz1H020sM46KBVu37yh-12" parent="jRz1H020sM46KBVu37yh-7" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R001&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-9" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="414" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-10" parent="tWXfouv_QulcDrbgWWDZ-9" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-11" parent="tWXfouv_QulcDrbgWWDZ-9" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="User Authenticatiion" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-12" parent="tWXfouv_QulcDrbgWWDZ-9" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-13" parent="tWXfouv_QulcDrbgWWDZ-9" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers and staff can access their account securely&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-14" parent="tWXfouv_QulcDrbgWWDZ-9" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R002&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-15" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="200" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-16" parent="tWXfouv_QulcDrbgWWDZ-15" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-17" parent="tWXfouv_QulcDrbgWWDZ-15" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Customer Login" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-18" parent="tWXfouv_QulcDrbgWWDZ-15" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-19" parent="tWXfouv_QulcDrbgWWDZ-15" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can login to manage their bookings&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-20" parent="tWXfouv_QulcDrbgWWDZ-15" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R003&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-21" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="414" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-22" parent="tWXfouv_QulcDrbgWWDZ-21" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-23" parent="tWXfouv_QulcDrbgWWDZ-21" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Staff Login" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-24" parent="tWXfouv_QulcDrbgWWDZ-21" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-25" parent="tWXfouv_QulcDrbgWWDZ-21" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Staff can login to access staff-only dashboard&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-26" parent="tWXfouv_QulcDrbgWWDZ-21" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R004&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-27" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="200" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-28" parent="tWXfouv_QulcDrbgWWDZ-27" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-29" parent="tWXfouv_QulcDrbgWWDZ-27" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="View Available Bookings" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-30" parent="tWXfouv_QulcDrbgWWDZ-27" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-31" parent="tWXfouv_QulcDrbgWWDZ-27" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customer can view available dates and times for booking&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-32" parent="tWXfouv_QulcDrbgWWDZ-27" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R005&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-33" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="414" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-34" parent="tWXfouv_QulcDrbgWWDZ-33" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-35" parent="tWXfouv_QulcDrbgWWDZ-33" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Create Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-36" parent="tWXfouv_QulcDrbgWWDZ-33" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-37" parent="tWXfouv_QulcDrbgWWDZ-33" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can create and submit a reservation request&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-38" parent="tWXfouv_QulcDrbgWWDZ-33" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R006&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-39" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="106" width="200" x="660" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-40" parent="tWXfouv_QulcDrbgWWDZ-39" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-41" parent="tWXfouv_QulcDrbgWWDZ-39" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="View Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-42" parent="tWXfouv_QulcDrbgWWDZ-39" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-43" parent="tWXfouv_QulcDrbgWWDZ-39" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can view their existing reservation and their current status&quot;" vertex="1">
+          <mxGeometry height="38" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-44" parent="tWXfouv_QulcDrbgWWDZ-39" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R007&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-45" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="104" width="200" x="874" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-46" parent="tWXfouv_QulcDrbgWWDZ-45" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-47" parent="tWXfouv_QulcDrbgWWDZ-45" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Update Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-48" parent="tWXfouv_QulcDrbgWWDZ-45" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-49" parent="tWXfouv_QulcDrbgWWDZ-45" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can update their existing reservation and their current status&quot;" vertex="1">
+          <mxGeometry height="46" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-50" parent="tWXfouv_QulcDrbgWWDZ-45" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R008&quot;" vertex="1">
+          <mxGeometry height="16" width="200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-52" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="200" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-53" parent="tWXfouv_QulcDrbgWWDZ-52" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-54" parent="tWXfouv_QulcDrbgWWDZ-52" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Cancel Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-55" parent="tWXfouv_QulcDrbgWWDZ-52" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-56" parent="tWXfouv_QulcDrbgWWDZ-52" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Customers can cancel their existing reservation&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-57" parent="tWXfouv_QulcDrbgWWDZ-52" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R009&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-58" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="414" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-59" parent="tWXfouv_QulcDrbgWWDZ-58" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-60" parent="tWXfouv_QulcDrbgWWDZ-58" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="View Reservation Requests" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-61" parent="tWXfouv_QulcDrbgWWDZ-58" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-62" parent="tWXfouv_QulcDrbgWWDZ-58" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Staff can view submitted reservation requests&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-63" parent="tWXfouv_QulcDrbgWWDZ-58" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R0010&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-64" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="200" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-65" parent="tWXfouv_QulcDrbgWWDZ-64" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-66" parent="tWXfouv_QulcDrbgWWDZ-64" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Approve Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-67" parent="tWXfouv_QulcDrbgWWDZ-64" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-68" parent="tWXfouv_QulcDrbgWWDZ-64" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Staff can approve an reservation request&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-69" parent="tWXfouv_QulcDrbgWWDZ-64" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R011&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-70" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="94" width="200" x="414" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-71" parent="tWXfouv_QulcDrbgWWDZ-70" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-72" parent="tWXfouv_QulcDrbgWWDZ-70" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Reject Reservation" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-73" parent="tWXfouv_QulcDrbgWWDZ-70" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-74" parent="tWXfouv_QulcDrbgWWDZ-70" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Staff can reject an reservation request&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-75" parent="tWXfouv_QulcDrbgWWDZ-70" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R012&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-76" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="128" width="200" x="200" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-77" parent="tWXfouv_QulcDrbgWWDZ-76" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-78" parent="tWXfouv_QulcDrbgWWDZ-76" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Update Reservation Status" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-79" parent="tWXfouv_QulcDrbgWWDZ-76" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-80" parent="tWXfouv_QulcDrbgWWDZ-76" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;The system must display whether a reservation is pending, approved, rejected, or cancelled for both customers and staff&quot;" vertex="1">
+          <mxGeometry height="60" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-81" parent="tWXfouv_QulcDrbgWWDZ-76" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R013&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-82" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
+          <mxGeometry height="106" width="200" x="414" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-83" parent="tWXfouv_QulcDrbgWWDZ-82" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="16" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-84" parent="tWXfouv_QulcDrbgWWDZ-82" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;fontStyle=1" value="Prevent Booking Conflicts" vertex="1">
+          <mxGeometry height="18" width="200" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-85" parent="tWXfouv_QulcDrbgWWDZ-82" style="line;strokeWidth=0.25;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-86" parent="tWXfouv_QulcDrbgWWDZ-82" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="text=&quot;Staff must be able to review reservation requests before approving or rejecting them.&quot;" vertex="1">
+          <mxGeometry height="38" width="200" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-87" parent="tWXfouv_QulcDrbgWWDZ-82" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Id=&quot;R014&quot;" vertex="1">
+          <mxGeometry height="26" width="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-88" parent="1" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;" value="Customer" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="tWXfouv_QulcDrbgWWDZ-89" parent="1" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;" value="Staff" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="460" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
