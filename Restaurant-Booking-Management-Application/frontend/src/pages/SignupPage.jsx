@@ -7,6 +7,8 @@ function SignupPage() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        
+        setMessage('');
 
         try {
             const response = await fetch('/api/auth/register', {
@@ -25,6 +27,9 @@ function SignupPage() {
             }
 
             setMessage('Registration successful!');
+
+            setEmail('');
+            setPassword('');
         } catch (error) {
             setMessage('Unable to connect to the server');
         }
