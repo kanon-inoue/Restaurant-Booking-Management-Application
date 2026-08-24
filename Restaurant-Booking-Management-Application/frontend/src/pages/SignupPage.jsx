@@ -34,7 +34,7 @@ function SignupPage() {
         <div>
             <h2>Customer Registration</h2>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} noValidate>
                 <div>
                     <label>Email</label>
                     <input
