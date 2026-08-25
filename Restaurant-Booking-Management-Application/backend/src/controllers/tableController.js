@@ -33,4 +33,18 @@ const createTable = async (req, res) => {
     }
 };
 
-module.exports = { createTable };
+const getTables = async (req, res) => {
+    try {
+        const tables = await Table.find().sort({
+            tableNumber: 1,
+        });
+
+        return res.status(200).json(tables);
+    } catch (error) {
+        return res.status(500).json({
+            message: error.message,
+        });
+    }
+};
+
+module.exports = { createTable, getTables };

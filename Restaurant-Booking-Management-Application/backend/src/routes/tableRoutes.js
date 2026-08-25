@@ -2,6 +2,7 @@ const express = require('express');
 
 const {
     createTable,
+    getTables,
 } = require('../controllers/tableController');
 
 const {
@@ -11,5 +12,6 @@ const {
 const router = express.Router();
 
 router.post('/', protect, createTable);
+router.get('/', protect, getTables);
 
 module.exports = router;
