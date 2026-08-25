@@ -1,4 +1,5 @@
 import { Navigate, useNavigate } from 'react-router-dom';
+import TableAvailabilitySearch from '../components/TableAvailabilitySearch';
 
 function CustomerDashboard() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ function CustomerDashboard() {
     return (
         <div>
             <h2>Customer Dashboard</h2>
-            <p>Welcome to the Restaurant Booking Management Application.</p>
+            <TableAvailabilitySearch />
             <button onClick={handleLogout}>Logout</button>
         </div>
     );
