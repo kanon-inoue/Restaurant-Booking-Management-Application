@@ -9,11 +9,44 @@ function TableAvailabilitySearch() {
     const handleSearch = (event) => {
         event.preventDefault();
 
-        if (!date || !time || !guests) {
-            setMessage(
-                'Please enter a date, time, and number of guests'
-            );
+        if (!date) {
+            setMessage('Please select a reservation date');
+            return;
+        }
 
+        const selectedDateTime = new Date(`${date}T${time}`);
+
+        if (Number.isNaN(selectedDateTime.getTime())) {
+            setMessage('Please enter a valid date and time');
+            return;
+        }
+
+        if (selectedDateTime <= new Date()) {
+            setMessage('Please select a future date and time');
+            return;
+        }
+
+        if (!time) {
+            setMessage('Please select a reservation time');
+            return;
+        }
+
+        const minutes = Number(time.split(':')[1]);
+
+        if (minutes !== 0 && minutes !== 30) {
+            setMessage('Please select a time in 30-minute intervals');
+            return;
+        }
+
+        if (!guests) {
+            setMessage('Please enter the number of guests');
+            return;
+        }
+
+        const partySize = Number(guests);
+
+        if (!Number.isInteger(partySize) || partySize < 1) {
+            setMessage('The number of guests must be at least 1');
             return;
         }
 
@@ -40,6 +73,7 @@ function TableAvailabilitySearch() {
 
                     <input
                         type="time"
+                        step="1800"
                         value={time}
                         onChange={(event) => setTime(event.target.value)}
                     />
@@ -50,6 +84,7 @@ function TableAvailabilitySearch() {
 
                     <input
                         type="number"
+                        min="1"
                         value={guests}
                         onChange={(event) => setGuests(event.target.value)}
                     />
