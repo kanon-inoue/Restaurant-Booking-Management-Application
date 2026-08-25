@@ -103,9 +103,45 @@ const deleteTable = async (req, res) => {
     }
 };
 
+const getAvailableTables = async (req, res) => {
+    const { date, time, partySize } = req.query;
+
+    if (!date || !time || !partySize) {
+        return res.status(400).json({
+            message: 'Date, time, and party size are required',
+        });
+    }
+
+    const guests = Number(partySize);
+
+    if (!Number.isInteger(guests) || guests < 1) {
+        return res.status(400).json({
+            message: 'Party size must be at least 1',
+        });
+    }
+
+    try {
+        const tables = await Table.find({
+            isActive: true,
+            capacity: {
+                $gte: guests,
+            },
+        }).sort({
+            tableNumber: 1,
+        });
+
+        return res.status(200).json(tables);
+    } catch (error) {
+        return res.status(500).json({
+            message: error.message,
+        });
+    }
+};
+
 module.exports = { 
     createTable, 
     getTables, 
     updateTable,
     deleteTable,
+    getAvailableTables
 };
