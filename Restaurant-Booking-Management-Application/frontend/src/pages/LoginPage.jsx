@@ -1,7 +1,45 @@
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function LoginPage() {
     const location = useLocation();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [message, setMessage] = useState(
+        location.state?.message || ''
+    );
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!email || !password) {
+            setMessage('Email and password are required');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                setMessage(data.message || 'Login failed');
+                return;
+            }
+
+            setMessage('Login successful!');
+        } catch (error) {
+            setMessage('Unable to connect to the server');
+        }
+    };
 
     return (
         <div>
@@ -11,19 +49,29 @@ function LoginPage() {
                 <p>{location.state.message}</p>
             )}
 
-            <form>
+            <form onSubmit={handleSubmit} noValidate>
                 <div>
                     <label>Email</label>
-                    <input type="email" />
+                    <input 
+                        type="email" 
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                    />
                 </div>
 
                 <div>
                     <label>Password</label>
-                    <input type="password" />
+                    <input 
+                        type="password" 
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                    />
                 </div>
 
-                <button type="button">Login</button>
+                <button type="submit">Login</button>
             </form>
+
+            {message && <p>{message}</p>}
         </div>
     );
 }
