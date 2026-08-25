@@ -4,7 +4,8 @@ const {
     createTable,
     getTables,
     updateTable,
-    deleteTable
+    deleteTable,
+    getAvailableTables
 } = require('../controllers/tableController');
 
 const {
@@ -17,5 +18,6 @@ router.post('/', protect, createTable);
 router.get('/', protect, getTables);
 router.put('/:id', protect, updateTable);
 router.delete('/:id', protect, deleteTable);
+router.get('/availability', protect, getAvailableTables);
 
 module.exports = router;
