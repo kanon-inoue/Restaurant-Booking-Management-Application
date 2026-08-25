@@ -3,7 +3,10 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const generateToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+    return jwt.sign(
+        { id }, 
+        process.env.JWT_SECRET, 
+        { expiresIn: '30d' });
 };
 
 const registerCustomer = async (req, res) => {
@@ -17,6 +20,7 @@ const registerCustomer = async (req, res) => {
 
     try {
         const userExists = await User.findOne({ email });
+
         if (userExists) return res.status(400).json({ 
             message: 'User already exists' 
         });
@@ -35,7 +39,9 @@ const registerCustomer = async (req, res) => {
         });
         
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({ 
+            message: error.message 
+        });
     }
 };
 
