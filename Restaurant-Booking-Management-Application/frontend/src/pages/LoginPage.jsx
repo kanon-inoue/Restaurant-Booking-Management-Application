@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import {
+    useLocation,
+    useNavigate,
+} from 'react-router-dom';
 
 function LoginPage() {
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -35,7 +39,8 @@ function LoginPage() {
                 return;
             }
 
-            setMessage('Login successful!');
+            localStorage.setItem('token', data.token);
+            navigate('/customerdashboard');
         } catch (error) {
             setMessage('Unable to connect to the server');
         }
