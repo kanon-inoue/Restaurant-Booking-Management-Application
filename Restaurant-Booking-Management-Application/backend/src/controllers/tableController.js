@@ -47,4 +47,65 @@ const getTables = async (req, res) => {
     }
 };
 
-module.exports = { createTable, getTables };
+const updateTable = async (req, res) => {
+    const { tableNumber, capacity, isActive } = req.body;
+
+    try {
+        const table = await Table.findById(req.params.id);
+
+        if (!table) {
+            return res.status(404).json({
+                message: 'Table not found',
+            });
+        }
+
+        if (tableNumber !== undefined) {
+            table.tableNumber = tableNumber;
+        }
+
+        if (capacity !== undefined) {
+            table.capacity = capacity;
+        }
+
+        if (isActive !== undefined) {
+            table.isActive = isActive;
+        }
+
+        const updatedTable = await table.save();
+
+        return res.status(200).json(updatedTable);
+    } catch (error) {
+        return res.status(500).json({
+            message: error.message,
+        });
+    }
+};
+
+const deleteTable = async (req, res) => {
+    try {
+        const table = await Table.findByIdAndDelete(
+            req.params.id
+        );
+
+        if (!table) {
+            return res.status(404).json({
+                message: 'Table not found',
+            });
+        }
+
+        return res.status(200).json({
+            message: 'Table deleted successfully',
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: error.message,
+        });
+    }
+};
+
+module.exports = { 
+    createTable, 
+    getTables, 
+    updateTable,
+    deleteTable,
+};
