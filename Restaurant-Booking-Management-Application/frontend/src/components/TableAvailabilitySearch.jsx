@@ -51,30 +51,6 @@ function TableAvailabilitySearch() {
             return;
         }
 
-        const partySize = Number(guests);
-
-        if (!Number.isInteger(partySize) || partySize < 1) {
-            setMessage('The number of guests must be at least 1');
-            return;
-        }
-
-        const minutes = Number(time.split(':')[1]);
-
-        if (minutes !== 0 && minutes !== 30) {
-            setMessage('Please select a time in 30-minute intervals');
-            return;
-        }
-
-        const selectedDateTime = new Date(`${date}T${time}`);
-
-        if (
-            Number.isNaN(selectedDateTime.getTime()) ||
-            selectedDateTime <= new Date()
-        ) {
-            setMessage('Please select a valid future date and time');
-            return;
-        }
-
         try {
             const token = localStorage.getItem('token');
 
