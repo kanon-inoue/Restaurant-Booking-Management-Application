@@ -16,11 +16,20 @@
         <mxCell id="jRz1H020sM46KBVu37yh-4" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Non-Functional Requirement" vertex="1">
           <mxGeometry height="60" width="120" x="2000" y="178" as="geometry" />
         </mxCell>
-        <mxCell id="jRz1H020sM46KBVu37yh-5" edge="1" parent="1" source="jRz1H020sM46KBVu37yh-2" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" target="jRz1H020sM46KBVu37yh-3" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="jRz1H020sM46KBVu37yh-5" edge="1" parent="1" source="jRz1H020sM46KBVu37yh-2" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jRz1H020sM46KBVu37yh-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="150" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="jRz1H020sM46KBVu37yh-6" edge="1" parent="1" source="jRz1H020sM46KBVu37yh-2" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" target="jRz1H020sM46KBVu37yh-4" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="jRz1H020sM46KBVu37yh-6" edge="1" parent="1" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" target="jRz1H020sM46KBVu37yh-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="150" />
+            </Array>
+            <mxPoint x="600" y="100" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="tWXfouv_QulcDrbgWWDZ-27" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
           <mxGeometry height="128" width="200" x="510" y="490" as="geometry" />
