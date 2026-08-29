@@ -8,7 +8,7 @@
           <mxGeometry height="1158" width="2390" x="-480" y="2" as="geometry" />
         </mxCell>
         <mxCell id="jRz1H020sM46KBVu37yh-2" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Restaurant Booking Management System" vertex="1">
-          <mxGeometry height="60" width="120" x="540" y="90" as="geometry" />
+          <mxGeometry height="60" width="120" x="540" y="40" as="geometry" />
         </mxCell>
         <mxCell id="jRz1H020sM46KBVu37yh-3" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Functional Requirement" vertex="1">
           <mxGeometry height="70" width="120" x="410" y="190" as="geometry" />
