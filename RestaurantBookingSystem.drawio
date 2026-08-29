@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="jRz1H020sM46KBVu37yh-1" parent="1" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=110;strokeWidth=2;align=center;" value="&lt;p style=&quot;margin:0px;margin-top:4px;margin-left:7px;text-align:left;&quot;&gt;&lt;b&gt;req&lt;/b&gt;  ReqDiagram&lt;/p&gt;" vertex="1">
-          <mxGeometry height="1158" width="3120" x="-460" y="-10" as="geometry" />
+          <mxGeometry height="1158" width="2810" x="-460" y="-10" as="geometry" />
         </mxCell>
         <mxCell id="jRz1H020sM46KBVu37yh-2" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;Restaurant Booking Management System" vertex="1">
           <mxGeometry height="60" width="120" x="540" y="40" as="geometry" />
@@ -786,7 +786,7 @@
           <mxGeometry height="26" width="200" y="68" as="geometry" />
         </mxCell>
         <mxCell id="P4SOf_T_04ccO4YrRqpu-122" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
-          <mxGeometry height="94" width="200" x="1850" y="470" as="geometry" />
+          <mxGeometry height="94" width="200" x="1780" y="640" as="geometry" />
         </mxCell>
         <mxCell id="P4SOf_T_04ccO4YrRqpu-123" parent="P4SOf_T_04ccO4YrRqpu-122" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="16" width="200" as="geometry" />
