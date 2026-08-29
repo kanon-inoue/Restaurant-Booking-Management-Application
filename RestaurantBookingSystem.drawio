@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="PIzPjd1FZAi6rG4LeMe5">
-    <mxGraphModel dx="1670" dy="2233" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2125" dy="2524" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -260,7 +260,7 @@
           <mxGeometry height="26" width="200" y="68" as="geometry" />
         </mxCell>
         <mxCell id="lxiRkbZqrdCg53YFpjcE-19" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
-          <mxGeometry height="94" width="200" x="40" y="810" as="geometry" />
+          <mxGeometry height="94" width="200" y="790" as="geometry" />
         </mxCell>
         <mxCell id="lxiRkbZqrdCg53YFpjcE-20" parent="lxiRkbZqrdCg53YFpjcE-19" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="16" width="200" as="geometry" />
@@ -496,7 +496,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="P4SOf_T_04ccO4YrRqpu-34" parent="1" style="fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;" value="" vertex="1">
-          <mxGeometry height="110" width="200" x="-180" y="980" as="geometry" />
+          <mxGeometry height="110" width="200" x="-230" y="929" as="geometry" />
         </mxCell>
         <mxCell id="P4SOf_T_04ccO4YrRqpu-35" parent="P4SOf_T_04ccO4YrRqpu-34" style="html=1;align=center;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingTop=3;" value="&amp;lt;&amp;lt;test case&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="16" width="200" as="geometry" />
@@ -510,7 +510,7 @@
         <mxCell id="P4SOf_T_04ccO4YrRqpu-38" parent="P4SOf_T_04ccO4YrRqpu-34" style="html=1;align=left;spacing=0;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;spacingLeft=10;" value="Verify that login features display an error message when the entered credentials are incorrect" vertex="1">
           <mxGeometry height="68" width="200" y="42" as="geometry" />
         </mxCell>
-        <mxCell id="P4SOf_T_04ccO4YrRqpu-40" edge="1" parent="1" source="P4SOf_T_04ccO4YrRqpu-35" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=top;rounded=0;fontSize=12;curved=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="lxiRkbZqrdCg53YFpjcE-12" value="&amp;lt;&amp;lt;verify&amp;gt;&amp;gt;">
+        <mxCell id="P4SOf_T_04ccO4YrRqpu-40" edge="1" parent="1" source="P4SOf_T_04ccO4YrRqpu-35" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=top;rounded=0;fontSize=12;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="lxiRkbZqrdCg53YFpjcE-12" value="&amp;lt;&amp;lt;verify&amp;gt;&amp;gt;">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="-350" y="840" as="sourcePoint" />
             <mxPoint x="-190" y="840" as="targetPoint" />
