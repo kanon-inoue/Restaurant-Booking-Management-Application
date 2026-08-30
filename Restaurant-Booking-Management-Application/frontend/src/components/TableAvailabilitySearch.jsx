@@ -1,144 +1,147 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 function TableAvailabilitySearch() {
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('');
-    const [guests, setGuests] = useState('');
-    const [message, setMessage] = useState('');
-    const [tables, setTables] = useState([]);
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [guests, setGuests] = useState('')
+  const [message, setMessage] = useState('')
+  const [tables, setTables] = useState([])
 
-    const handleSearch = async (event) => {
-        event.preventDefault();
+  const handleSearch = async (event) => {
+    event.preventDefault()
 
-        if (!date) {
-            setMessage('Please select a reservation date');
-            return;
-        }
+    if (!date) {
+      setMessage('Please select a reservation date')
+      return
+    }
 
-        const selectedDateTime = new Date(`${date}T${time}`);
+    const selectedDateTime = new Date(`${date}T${time}`)
 
-        if (Number.isNaN(selectedDateTime.getTime())) {
-            setMessage('Please enter a valid date and time');
-            return;
-        }
+    if (Number.isNaN(selectedDateTime.getTime())) {
+      setMessage('Please enter a valid date and time')
+      return
+    }
 
-        if (selectedDateTime <= new Date()) {
-            setMessage('Please select a future date and time');
-            return;
-        }
+    if (selectedDateTime <= new Date()) {
+      setMessage('Please select a future date and time')
+      return
+    }
 
-        if (!time) {
-            setMessage('Please select a reservation time');
-            return;
-        }
+    if (!time) {
+      setMessage('Please select a reservation time')
+      return
+    }
 
-        const minutes = Number(time.split(':')[1]);
+    const minutes = Number(time.split(':')[1])
 
-        if (minutes !== 0 && minutes !== 30) {
-            setMessage('Please select a time in 30-minute intervals');
-            return;
-        }
+    if (minutes !== 0 && minutes !== 30) {
+      setMessage('Please select a time in 30-minute intervals')
+      return
+    }
 
-        if (!guests) {
-            setMessage('Please enter the number of guests');
-            return;
-        }
+    if (!guests) {
+      setMessage('Please enter the number of guests')
+      return
+    }
 
-        const partySize = Number(guests);
+    const partySize = Number(guests)
 
-        if (!Number.isInteger(partySize) || partySize < 1) {
-            setMessage('The number of guests must be at least 1');
-            return;
-        }
+    if (!Number.isInteger(partySize) || partySize < 1) {
+      setMessage('The number of guests must be at least 1')
+      return
+    }
 
-        try {
-            const token = localStorage.getItem('token');
+    try {
+      const token = localStorage.getItem('token')
 
-            const query = new URLSearchParams({
-                date,
-                time,
-                partySize: String(partySize),
-            });
+      const query = new URLSearchParams({
+        date,
+        time,
+        partySize: String(partySize),
+      })
 
-            const response = await fetch(
-                `/api/tables/availability?${query}`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
+      const response = await fetch(`/api/tables/availability?${query}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
 
-            const data = await response.json();
+      const data = await response.json()
 
-            if (!response.ok) {
-                setMessage(data.message || 'Unable to search tables');
-                return;
-            }
+      if (!response.ok) {
+        setMessage(data.message || 'Unable to search tables')
+        return
+      }
 
-            setTables(data);
+      setTables(data)
 
-            if (data.length === 0) {
-                setMessage('No suitable tables found');
-            } else {
-                setMessage(`${data.length} suitable table(s) found`);
-            }
-        } catch (error) {
-            setMessage('Unable to connect to the server');
-        }
-    };
+      if (data.length === 0) {
+        setMessage('No suitable tables found')
+      } else {
+        setMessage(`${data.length} suitable table(s) found`)
+      }
+    } catch (error) {
+      setMessage('Unable to connect to the server')
+    }
+  }
 
-    return (
+  return (
+    <div>
+      <h3>Search Available Tables</h3>
+
+      <form onSubmit={handleSearch} noValidate>
         <div>
-            <h3>Search Available Tables</h3>
+          <label>Date</label>
 
-            <form onSubmit={handleSearch} noValidate>
-                <div>
-                    <label>Date</label>
-
-                    <input
-                        type="date"
-                        value={date}
-                        onChange={(event) => setDate(event.target.value)}
-                    />
-                </div>
-
-                <div>
-                    <label>Time</label>
-
-                    <input
-                        type="time"
-                        step='1800'
-                        value={time}
-                        onChange={(event) => setTime(event.target.value)}
-                    />
-                </div>
-
-                <div>
-                    <label>Number of Guests</label>
-
-                    <input
-                        type="number"
-                        min='1'
-                        value={guests}
-                        onChange={(event) => setGuests(event.target.value)}
-                    />
-                </div>
-
-                <button type="submit">
-                    Search Tables
-                </button>
-            </form>
-
-            {message && <p>{message}</p>}
-
-            {tables.map((table) => (
-                <div key={table._id}>
-                    Table {table.tableNumber} — Seats {table.capacity}
-                </div>
-            ))}
+          <input
+            type="date"
+            value={date}
+            onChange={(event) => setDate(event.target.value)}
+          />
         </div>
-    );
+
+        <div>
+          <label>Time</label>
+
+          <input
+            type="time"
+            step="1800"
+            value={time}
+            onChange={(event) => setTime(event.target.value)}
+          />
+        </div>
+
+        <div>
+          <label>Number of Guests</label>
+
+          <input
+            type="number"
+            min="1"
+            value={guests}
+            onChange={(event) => setGuests(event.target.value)}
+          />
+        </div>
+
+        <button type="submit">Search Tables</button>
+      </form>
+
+      {message && <p>{message}</p>}
+
+      {tables.length > 0 && (
+        <div>
+          <h4>Available Tables</h4>
+
+          {tables.map((table) => (
+            <div key={table._id}>
+              <p>
+                Table {table.tableNumber} — Capacity: {table.capacity}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
 }
 
-export default TableAvailabilitySearch;
+export default TableAvailabilitySearch
