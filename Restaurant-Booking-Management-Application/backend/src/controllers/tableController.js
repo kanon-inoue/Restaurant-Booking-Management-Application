@@ -1,4 +1,5 @@
 const Table = require('../models/Table')
+const Reservation = require('../models/Reservation')
 
 const createTable = async (req, res) => {
   const { tableNumber, capacity } = req.body
@@ -116,19 +117,39 @@ const getAvailableTables = async (req, res) => {
     return res.status(400).json({ message: 'Party size must be at least 1' })
   }
 
-  const selectedDateTime = new Date(`${date}T${time}`)
+  const requestedStart = new Date(`${date}T${time}`)
 
-  if (
-    Number.isNaN(selectedDateTime.getTime()) ||
-    selectedDateTime <= new Date()
-  ) {
+  if (Number.isNaN(requestedStart.getTime()) || requestedStart <= new Date()) {
     return res.status(400).json({
       message: 'Please select a valid future date and time',
     })
   }
 
+  // Each reservation occupies a table for 120 minutes
+  const reservationDuration = 120 * 60 * 1000
+  const requestedEnd = new Date(requestedStart.getTime() + reservationDuration)
+
   try {
+    const overlappingReservations = await Reservation.find({
+      status: {
+        $in: ['pending', 'approved'],
+      },
+      startTime: {
+        $lt: requestedEnd,
+      },
+      endTime: {
+        $gt: requestedStart,
+      },
+    }).select('table')
+
+    const unavailableTableIds = overlappingReservations.map(
+      (reservation) => reservation.table,
+    )
+
     const tables = await Table.find({
+      _id: {
+        $nin: unavailableTableIds,
+      },
       isActive: true,
       capacity: { $gte: guests },
     }).sort({
