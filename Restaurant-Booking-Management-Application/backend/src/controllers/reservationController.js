@@ -110,7 +110,145 @@ const getMyReservations = async (req, res) => {
   }
 }
 
+const updateReservation = async (req, res) => {
+  const { tableId, partySize, startTime, status } = req.body
+
+  try {
+    const reservation = await Reservation.findById(req.params.id)
+
+    if (!reservation) {
+      return res.status(404).json({
+        message: 'Reservation not found',
+      })
+    }
+
+    const isOwner = reservation.customer.toString() === req.user._id.toString()
+
+    const isStaff = req.user.role === 'staff'
+
+    if (!isOwner && !isStaff) {
+      return res.status(403).json({
+        message: 'You are not authorised to update this reservation',
+      })
+    }
+
+    const detailsChanged =
+      tableId !== undefined ||
+      partySize !== undefined ||
+      startTime !== undefined
+
+    if (!isStaff && detailsChanged && reservation.status !== 'pending') {
+      return res.status(400).json({
+        message: 'Only pending reservations can be modified',
+      })
+    }
+
+    if (status !== undefined) {
+      const allowedStatuses = ['pending', 'approved', 'rejected', 'cancelled']
+
+      if (!allowedStatuses.includes(status)) {
+        return res.status(400).json({
+          message: 'Invalid reservation status',
+        })
+      }
+
+      if (!isStaff && status !== 'cancelled') {
+        return res.status(403).json({
+          message: 'Customers can only cancel reservations',
+        })
+      }
+    }
+
+    const newTableId = tableId !== undefined ? tableId : reservation.table
+
+    const newPartySize =
+      partySize !== undefined ? Number(partySize) : reservation.partySize
+
+    const newStartTime =
+      startTime !== undefined ? new Date(startTime) : reservation.startTime
+
+    if (!Number.isInteger(newPartySize) || newPartySize < 1) {
+      return res.status(400).json({
+        message: 'Party size must be at least 1',
+      })
+    }
+
+    if (Number.isNaN(newStartTime.getTime()) || newStartTime <= new Date()) {
+      return res.status(400).json({
+        message: 'A valid future start time is required',
+      })
+    }
+
+    const newEndTime = new Date(newStartTime.getTime() + 90 * 60 * 1000)
+
+    if (detailsChanged) {
+      const table = await Table.findOne({
+        _id: newTableId,
+        isActive: true,
+      })
+
+      if (!table) {
+        return res.status(404).json({
+          message: 'Active table not found',
+        })
+      }
+
+      if (table.capacity < newPartySize) {
+        return res.status(400).json({
+          message: 'The selected table is too small',
+        })
+      }
+
+      const resultingStatus = status || reservation.status
+
+      if (resultingStatus === 'pending' || resultingStatus === 'approved') {
+        const overlap = await Reservation.findOne({
+          _id: {
+            $ne: reservation._id,
+          },
+          table: newTableId,
+          status: {
+            $in: ['pending', 'approved'],
+          },
+          startTime: {
+            $lt: newEndTime,
+          },
+          endTime: {
+            $gt: newStartTime,
+          },
+        })
+
+        if (overlap) {
+          return res.status(409).json({
+            message: 'The selected table is unavailable at that time',
+          })
+        }
+      }
+
+      reservation.table = newTableId
+      reservation.partySize = newPartySize
+      reservation.startTime = newStartTime
+      reservation.endTime = newEndTime
+    }
+
+    if (status !== undefined) {
+      reservation.status = status
+    }
+
+    await reservation.save()
+
+    await reservation.populate('table', 'tableNumber capacity')
+
+    return res.status(200).json(reservation)
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message,
+    })
+  }
+}
+
 module.exports = {
   createReservation,
   getMyReservations,
+  updateReservation,
 }
