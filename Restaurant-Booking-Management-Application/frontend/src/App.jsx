@@ -5,6 +5,7 @@ import CustomerDashboard from './pages/CustomerDashboard'
 import FindTablePage from './pages/FindTablePage'
 import ManageBookingsPage from './pages/ManageBookingsPage'
 import ReservationPendingPage from './pages/ReservationPendingPage'
+import ReservationDetailPage from './pages/ReservationDetailPage'
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         <Route
           path="/reservation-pending"
           element={<ReservationPendingPage />}
+        />
+        <Route
+          path="/reservation-details"
+          element={<ReservationDetailPage />}
         />
       </Routes>
     </BrowserRouter>

@@ -54,6 +54,16 @@ function ManageBookingsPage() {
           </p>
 
           <p>Status: {reservation.status}</p>
+          <button
+            type="button"
+            onClick={() =>
+              navigate('/reservation-details', {
+                state: { reservation },
+              })
+            }
+          >
+            View Details
+          </button>
         </div>
       ))}
 
