@@ -92,6 +92,25 @@ const createReservation = async (req, res) => {
   }
 }
 
+const getMyReservations = async (req, res) => {
+  try {
+    const reservations = await Reservation.find({
+      customer: req.user._id,
+    })
+      .populate('table', 'tableNumber capacity')
+      .sort({
+        startTime: 1,
+      })
+
+    return res.status(200).json(reservations)
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message,
+    })
+  }
+}
+
 module.exports = {
   createReservation,
+  getMyReservations,
 }
