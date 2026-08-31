@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage'
 import CustomerDashboard from './pages/CustomerDashboard'
 import FindTablePage from './pages/FindTablePage'
 import ManageBookingsPage from './pages/ManageBookingsPage'
+import ReservationPendingPage from './pages/ReservationPendingPage'
 
 function App() {
   return (
@@ -13,9 +14,13 @@ function App() {
         <Route path="/" element={<SignupPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/customerdashboard" element={<CustomerDashboard />} />
+        <Route path="/customer-dashboard" element={<CustomerDashboard />} />
         <Route path="/find-table" element={<FindTablePage />} />
         <Route path="/manage-bookings" element={<ManageBookingsPage />} />
+        <Route
+          path="/reservation-pending"
+          element={<ReservationPendingPage />}
+        />
       </Routes>
     </BrowserRouter>
   )

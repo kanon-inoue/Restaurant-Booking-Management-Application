@@ -1,12 +1,10 @@
-import { Navigate, useNavigate } from 'react-router-dom'
-import TableAvailabilitySearch from '../components/TableAvailabilitySearch'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function CustomerDashboard() {
   const navigate = useNavigate()
-
-  const token = localStorage.getItem('token')
-
   useEffect(() => {
+    const token = localStorage.getItem('token')
     if (!token) {
       navigate('/login', {
         replace: true,
