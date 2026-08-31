@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function TableAvailabilitySearch() {
   const [date, setDate] = useState('')
@@ -6,6 +7,7 @@ function TableAvailabilitySearch() {
   const [guests, setGuests] = useState('')
   const [message, setMessage] = useState('')
   const [tables, setTables] = useState([])
+  const navigate = useNavigate()
 
   const handleSearch = async (event) => {
     event.preventDefault()
@@ -85,6 +87,34 @@ function TableAvailabilitySearch() {
     }
   }
 
+  const handleReserve = async (table) => {
+    const selectedDateTime = new Date(`${date}T${time}`)
+
+    const response = await fetch('/api/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+      body: JSON.stringify({
+        tableId: table._id,
+        partySize: Number(guests),
+        startTime: selectedDateTime.toISOString(),
+      }),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+      alert(data.message || 'Unable to create reservation')
+      return
+    }
+
+    navigate('/reservation-pending', {
+      state: { reservation: data },
+    })
+  }
+
   return (
     <div>
       <h3>Search Available Tables</h3>
@@ -136,6 +166,9 @@ function TableAvailabilitySearch() {
               <p>
                 Table {table.tableNumber} — Capacity: {table.capacity}
               </p>
+              <button type="button" onClick={() => handleReserve(table)}>
+                Reserve Table
+              </button>
             </div>
           ))}
         </div>
