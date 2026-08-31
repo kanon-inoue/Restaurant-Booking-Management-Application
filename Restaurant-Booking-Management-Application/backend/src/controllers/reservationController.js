@@ -97,6 +97,7 @@ const getMyReservations = async (req, res) => {
     const reservations = await Reservation.find({
       customer: req.user._id,
     })
+      .populate('customer', 'email role')
       .populate('table', 'tableNumber capacity')
       .sort({
         startTime: 1,
