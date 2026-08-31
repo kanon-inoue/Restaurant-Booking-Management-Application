@@ -1,20 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignupPage from './pages/SignupPage';
-import LoginPage from './pages/LoginPage';
-import CustomerDashboard from './pages/CustomerDashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import SignupPage from './pages/SignupPage'
+import LoginPage from './pages/LoginPage'
+import CustomerDashboard from './pages/CustomerDashboard'
+import FindTablePage from './pages/FindTablePage'
+import ManageBookingsPage from './pages/ManageBookingsPage'
 
 function App() {
-    return (
-        <BrowserRouter>
-            <h1>Restaurant Booking Management</h1>
-            <Routes>
-                <Route path="/" element={<SignupPage />} />
-                <Route path="/signup" element={<SignupPage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/customerdashboard" element={<CustomerDashboard />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <h1>Restaurant Booking Management</h1>
+      <Routes>
+        <Route path="/" element={<SignupPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/customerdashboard" element={<CustomerDashboard />} />
+        <Route path="/find-table" element={<FindTablePage />} />
+        <Route path="/manage-bookings" element={<ManageBookingsPage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
