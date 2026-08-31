@@ -17,8 +17,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/auth', require(authRoutes))
-app.use('/api/tables', require(tableRoutes))
+app.use('/api/auth', authRoutes)
+app.use('/api/tables', tableRoutes)
 
 app.get('/', (req, res) => {
   res.send('Restaurant Booking Management API is running')
