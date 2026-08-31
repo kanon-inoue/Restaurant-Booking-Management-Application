@@ -11,6 +11,7 @@ dotenv.config({
 const connectDB = require('./config/database')
 const authRoutes = require('./routes/authRoutes')
 const tableRoutes = require('./routes/tableRoutes')
+const reservationRoutes = require('./routes/reservationRoutes')
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/api/tables', tableRoutes)
+app.use('/api/reservations', reservationRoutes)
 
 app.get('/', (req, res) => {
   res.send('Restaurant Booking Management API is running')
