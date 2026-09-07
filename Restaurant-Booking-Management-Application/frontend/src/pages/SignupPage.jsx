@@ -68,6 +68,13 @@ function SignupPage() {
                 </div>
 
                 <button type="submit">Register</button>
+                <h4>Do you already have an account?</h4>
+                <button
+                    type="button"
+                    onClick={() => navigate('/login')}
+                    >
+                    Login Page
+                </button>
             </form>
 
             {message && <p>{message}</p>}
