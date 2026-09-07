@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const ROLES = require("../constants/roles");
 
 const userSchema = new mongoose.Schema({
     email: { 
@@ -15,8 +16,8 @@ const userSchema = new mongoose.Schema({
     },
     role: { 
         type: String, 
-        enum: ['customer', 'staff'],
-        default: 'customer',
+        enum: Object.values(ROLES),
+        default: ROLES.CUSTOMER,
         required: true,
     }
 },
