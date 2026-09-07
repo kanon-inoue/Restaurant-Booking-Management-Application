@@ -6,6 +6,9 @@ function StaffPendingReservations() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
     const [updatingId, setUpdatingId] = useState(null)
+    const [actionMessage, setActionMessage] = useState('')
+    const [actionError, setActionError] = useState('')
+
     const navigate = useNavigate()
     useEffect(() => {
         const getPendingReservations = async () => {
@@ -37,31 +40,36 @@ function StaffPendingReservations() {
     const updateReservationStatus = async (reservationId, status) => {
         try {
             setUpdatingId(reservationId)
+            setActionMessage('')
+            setActionError('')
             const token = localStorage.getItem('token')
             const response = await fetch(
-            `/api/reservations/${reservationId}/status`,
-            {
-                method: 'PATCH',
-                headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-                },
-                body: JSON.stringify({ status }),
-            }
-            )
-            const data = await response.json()
+                `/api/reservations/${reservationId}/status`,
+                {
+                    method: 'PATCH',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                    },
+                    body: JSON.stringify({ status }),
+                }
+                )
+                const data = await response.json()
 
-            if (!response.ok) {
-            throw new Error(data.message || 'Unable to update reservation')
-            }
+                if (!response.ok) {
+                throw new Error(data.message || 'Unable to update reservation')
+                }
 
-            setReservations((currentReservations) =>
-            currentReservations.filter(
-                (reservation) => reservation._id !== reservationId
+                setReservations((currentReservations) =>
+                currentReservations.filter(
+                    (reservation) => reservation._id !== reservationId
+                )
             )
+            setActionMessage(
+                data.message || `Reservation ${status} successfully`
             )
         } catch (error) {
-            window.alert(error.message)
+            setActionError(error.message)
         } finally {
             setUpdatingId(null)
         }
@@ -78,6 +86,18 @@ function StaffPendingReservations() {
   return (
     <div>
       <h2>Pending Reservations</h2>
+      {actionMessage && (
+        <p role="status">
+            {actionMessage}
+        </p>
+      )}
+
+      {actionError && (
+        <p role="alert">
+            {actionError}
+        </p>
+      )}
+      
       {reservations.length === 0 ? (
         <p>There are no pending reservations.</p>
       ) : (
