@@ -267,9 +267,59 @@ const getPendingReservations = async (req, res) => {
   }
 }
 
+const updateReservationStatus = async (req, res) => {
+  const { status } = req.body
+  const { id } = req.params
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({
+      message: 'Invalid reservation ID',
+    })
+  }
+
+  if (!['approved', 'rejected'].includes(status)) {
+    return res.status(400).json({
+      message: 'Status must be approved or rejected',
+    })
+  }
+
+  try {
+    const reservation = await Reservation.findById(id)
+
+    if (!reservation) {
+      return res.status(404).json({
+        message: 'Reservation not found',
+      })
+    }
+
+    if (reservation.status !== 'pending') {
+      return res.status(400).json({
+        message: 'Only pending reservations can be approved or rejected',
+      })
+    }
+
+    reservation.status = status
+
+    await reservation.save()
+
+    await reservation.populate('customer', 'email role')
+    await reservation.populate('table', 'tableNumber capacity')
+
+    return res.status(200).json({
+      message: `Reservation ${status} successfully`,
+      reservation,
+    })
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message,
+    })
+  }
+}
+
 module.exports = {
   createReservation,
   getMyReservations,
   updateReservation,
-  getPendingReservations
+  getPendingReservations,
+  updateReservationStatus
 }
