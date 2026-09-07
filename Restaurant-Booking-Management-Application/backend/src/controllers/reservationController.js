@@ -180,7 +180,7 @@ const updateReservation = async (req, res) => {
       })
     }
 
-    const newEndTime = new Date(newStartTime.getTime() + 90 * 60 * 1000)
+    const newEndTime = new Date(newStartTime.getTime() + 120 * 60 * 1000)
 
     if (detailsChanged) {
       const table = await Table.findOne({

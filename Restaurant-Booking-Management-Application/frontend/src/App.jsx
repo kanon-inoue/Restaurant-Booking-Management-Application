@@ -8,6 +8,7 @@ import ReservationPendingPage from './pages/ReservationPendingPage'
 import ProtectedRoute from './components/ProtectedRoute'
 import StaffDashboard from './pages/StaffDashboard'
 import StaffPendingReservations from './pages/StaffPendingReservations'
+import ReservationDetailPage from './pages/ReservationDetailPage'
 
 function App() {
   return (
