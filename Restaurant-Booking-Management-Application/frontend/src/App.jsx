@@ -18,17 +18,48 @@ function App() {
         <Route path="/" element={<SignupPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/customer-dashboard" element={<CustomerDashboard />} />
-        <Route path="/find-table" element={<FindTablePage />} />
-        <Route path="/manage-bookings" element={<ManageBookingsPage />} />
+
+        <Route 
+          path="/customer-dashboard" 
+          element={
+            <ProtectedRoute allowedRoles={['customer']}>
+              <CustomerDashboard />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/find-table" 
+          element={
+            <ProtectedRoute allowedRoles={['customer']}>
+              <FindTablePage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/manage-bookings" 
+          element={
+            <ProtectedRoute allowedRoles={['customer']}>
+              <ManageBookingsPage />
+            </ProtectedRoute>
+          } 
+        />
         <Route
           path="/reservation-pending"
-          element={<ReservationPendingPage />}
+          element={
+            <ProtectedRoute allowedRoles={['customer']}>
+              <ReservationPendingPage />
+            </ProtectedRoute>
+          } 
         />
         <Route
           path="/reservation-detail"
-          element={<ReservationDetailPage />}
+          element={
+            <ProtectedRoute allowedRoles={['customer']}>
+              <ReservationDetailPage />
+            </ProtectedRoute>
+          } 
         />
+        
         <Route
           path="/staff"
           element={
