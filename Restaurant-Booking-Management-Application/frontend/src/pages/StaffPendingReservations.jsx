@@ -5,6 +5,7 @@ function StaffPendingReservations() {
     const [reservations, setReservations] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
+    const [updatingId, setUpdatingId] = useState(null)
     const navigate = useNavigate()
     useEffect(() => {
         const getPendingReservations = async () => {
@@ -33,6 +34,39 @@ function StaffPendingReservations() {
         getPendingReservations()
     }, [])
 
+    const updateReservationStatus = async (reservationId, status) => {
+        try {
+            setUpdatingId(reservationId)
+            const token = localStorage.getItem('token')
+            const response = await fetch(
+            `/api/reservations/${reservationId}/status`,
+            {
+                method: 'PATCH',
+                headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify({ status }),
+            }
+            )
+            const data = await response.json()
+
+            if (!response.ok) {
+            throw new Error(data.message || 'Unable to update reservation')
+            }
+
+            setReservations((currentReservations) =>
+            currentReservations.filter(
+                (reservation) => reservation._id !== reservationId
+            )
+            )
+        } catch (error) {
+            window.alert(error.message)
+        } finally {
+            setUpdatingId(null)
+        }
+    }
+
     if (loading) {
         return <p>Loading pending reservations...</p>
     }
@@ -40,6 +74,7 @@ function StaffPendingReservations() {
     if (error) {
         return <p>{error}</p>
     }
+    
   return (
     <div>
       <h2>Pending Reservations</h2>
@@ -64,6 +99,25 @@ function StaffPendingReservations() {
               {new Date(reservation.endTime).toLocaleString()}
             </p>
             <p>Status: {reservation.status}</p>
+            <button
+                type="button"
+                disabled={updatingId === reservation._id}
+                onClick={() =>
+                    updateReservationStatus(reservation._id, 'approved')
+                }
+                >
+                Approve
+                </button>
+
+                <button
+                type="button"
+                disabled={updatingId === reservation._id}
+                onClick={() =>
+                    updateReservationStatus(reservation._id, 'rejected')
+                }
+                >
+                Reject
+            </button>
           </div>
         ))
       )}
