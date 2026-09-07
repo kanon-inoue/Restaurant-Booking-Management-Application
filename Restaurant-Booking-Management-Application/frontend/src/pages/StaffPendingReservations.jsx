@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function StaffPendingReservations() {
     const [reservations, setReservations] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
+    const navigate = useNavigate()
     useEffect(() => {
         const getPendingReservations = async () => {
         try {
@@ -65,6 +67,12 @@ function StaffPendingReservations() {
           </div>
         ))
       )}
+      <button
+        type="button"
+        onClick={() => navigate('/staff')}
+        >
+        Back to Staff Dashboard
+      </button>
     </div>
   )
 }

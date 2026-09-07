@@ -4,7 +4,8 @@ const {
   createReservation,
   getMyReservations,
   updateReservation,
-  getPendingReservations
+  getPendingReservations,
+  updateReservationStatus
 } = require('../controllers/reservationController')
 
 const { protect, authorize, } = require('../middleware/authMiddleware')
@@ -19,6 +20,12 @@ router.get(
   protect,
   authorize('staff'),
   getPendingReservations
+)
+router.patch(
+  '/:id/status',
+  protect,
+  authorize('staff'),
+  updateReservationStatus
 )
 
 module.exports = router

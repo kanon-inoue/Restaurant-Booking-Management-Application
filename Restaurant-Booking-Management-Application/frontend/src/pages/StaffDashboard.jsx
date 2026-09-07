@@ -12,7 +12,9 @@ function StaffDashboard() {
     <div>
       <h2>Staff Dashboard</h2>
       <p>Welcome to the staff dashboard.</p>
-
+      <button type="button" onClick={() => navigate('/staff/reservations')}>
+        Manage Pending Request
+      </button>
       <button type="button" onClick={handleLogout}>
         Logout
       </button>
