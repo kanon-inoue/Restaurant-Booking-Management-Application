@@ -26,6 +26,10 @@ function App() {
           element={<ReservationPendingPage />}
         />
         <Route
+          path="/reservation-detail"
+          element={<ReservationDetailPage />}
+        />
+        <Route
           path="/staff"
           element={
             <ProtectedRoute allowedRoles={['staff']}>
@@ -37,15 +41,7 @@ function App() {
           path="/staff/reservations"
           element={
             <ProtectedRoute allowedRoles={['staff']}>
-              <PendingReservations />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/staff/tables"
-          element={
-            <ProtectedRoute allowedRoles={['staff']}>
-              <TableManagement />
+              <StaffPendingReservations />
             </ProtectedRoute>
           }
         />
