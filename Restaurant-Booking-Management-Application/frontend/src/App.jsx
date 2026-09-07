@@ -5,6 +5,9 @@ import CustomerDashboard from './pages/CustomerDashboard'
 import FindTablePage from './pages/FindTablePage'
 import ManageBookingsPage from './pages/ManageBookingsPage'
 import ReservationPendingPage from './pages/ReservationPendingPage'
+import ProtectedRoute from './components/ProtectedRoute'
+import StaffDashboard from './pages/StaffDashboard'
+import StaffPendingReservations from './pages/StaffPendingReservations'
 
 function App() {
   return (
@@ -20,6 +23,30 @@ function App() {
         <Route
           path="/reservation-pending"
           element={<ReservationPendingPage />}
+        />
+        <Route
+          path="/staff"
+          element={
+            <ProtectedRoute allowedRoles={['staff']}>
+              <StaffDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/staff/reservations"
+          element={
+            <ProtectedRoute allowedRoles={['staff']}>
+              <PendingReservations />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/staff/tables"
+          element={
+            <ProtectedRoute allowedRoles={['staff']}>
+              <TableManagement />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </BrowserRouter>

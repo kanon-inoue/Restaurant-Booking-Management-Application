@@ -35,7 +35,13 @@ function LoginPage() {
       }
 
       localStorage.setItem('token', data.token)
-      navigate('/customer-dashboard')
+      localStorage.setItem('role', data.role)
+
+      if (data.role === 'staff') {
+        navigate('/staff')
+      } else {
+        navigate('/customer-dashboard')
+      }
     } catch (error) {
       setMessage('Unable to connect to the server')
     }
