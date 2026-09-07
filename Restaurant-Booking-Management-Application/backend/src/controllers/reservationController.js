@@ -248,8 +248,28 @@ const updateReservation = async (req, res) => {
   }
 }
 
+const getPendingReservations = async (req, res) => {
+  try {
+    const reservations = await Reservation.find({
+      status: 'pending',
+    })
+      .populate('customer', 'email role')
+      .populate('table', 'tableNumber capacity')
+      .sort({
+        startTime: 1,
+      })
+
+    return res.status(200).json(reservations)
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message,
+    })
+  }
+}
+
 module.exports = {
   createReservation,
   getMyReservations,
   updateReservation,
+  getPendingReservations
 }
